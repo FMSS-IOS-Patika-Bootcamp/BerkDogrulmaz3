@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GwT-4I-IVy">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Posts-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PostsVC" customModule="PostsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gh7-cn-MfG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POSTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ec6-uq-0jp">
+                                        <rect key="frame" x="168" y="39" width="78" height="33"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8980392157" green="0.0" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ec6-uq-0jp" secondAttribute="bottom" constant="8" id="Cok-m2-9bG"/>
+                                    <constraint firstAttribute="height" constant="80" id="PyQ-WM-UO6"/>
+                                    <constraint firstItem="ec6-uq-0jp" firstAttribute="centerX" secondItem="Gh7-cn-MfG" secondAttribute="centerX" id="fkk-3R-nIT"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TbE-Yb-Vnh">
+                                <rect key="frame" x="0.0" y="80" width="414" height="816"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostCell" id="yZu-yR-J2K" customClass="PostCell" customModule="PostsDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="159"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yZu-yR-J2K" id="cBQ-nx-q7q">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="159"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qVy-Sc-haW">
+                                                    <rect key="frame" x="20" y="11" width="374" height="137"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xg4-yS-l3q">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="25"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User 12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzi-nq-JBN">
+                                                                    <rect key="frame" x="0.0" y="2.5" width="187" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#4" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueY-sd-Vpn">
+                                                                    <rect key="frame" x="187" y="2.5" width="187" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="25" id="6g5-3J-ZBm"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the title text." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIU-35-XNE">
+                                                            <rect key="frame" x="0.0" y="30" width="374" height="27.5"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                            <color key="textColor" red="0.8980392157" green="0.0" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the body text. This is the body text. This is the body text. This is the body text. This is the body text." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOY-WK-xnm">
+                                                            <rect key="frame" x="0.0" y="62.5" width="374" height="74.5"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="qVy-Sc-haW" secondAttribute="bottom" id="OFR-08-se5"/>
+                                                <constraint firstItem="qVy-Sc-haW" firstAttribute="top" secondItem="cBQ-nx-q7q" secondAttribute="topMargin" id="iMf-O9-52v"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qVy-Sc-haW" secondAttribute="trailing" id="pOY-i4-xbA"/>
+                                                <constraint firstItem="qVy-Sc-haW" firstAttribute="leading" secondItem="cBQ-nx-q7q" secondAttribute="leadingMargin" id="z3i-UU-SFv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bodyLbl" destination="ZOY-WK-xnm" id="Zy1-8A-vdY"/>
+                                            <outlet property="idLbl" destination="ueY-sd-Vpn" id="FLk-SC-3OB"/>
+                                            <outlet property="titleLbl" destination="pIU-35-XNE" id="Jza-w3-iz8"/>
+                                            <outlet property="userIDLbl" destination="Vzi-nq-JBN" id="RHY-Q2-DJJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TbE-Yb-Vnh" firstAttribute="top" secondItem="Gh7-cn-MfG" secondAttribute="bottom" id="GtZ-w5-ScF"/>
+                            <constraint firstAttribute="bottom" secondItem="TbE-Yb-Vnh" secondAttribute="bottom" id="YmX-UX-In1"/>
+                            <constraint firstItem="TbE-Yb-Vnh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bPv-k4-eVz"/>
+                            <constraint firstItem="Gh7-cn-MfG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gzB-cx-ZTi"/>
+                            <constraint firstItem="Gh7-cn-MfG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="s9B-nS-jbI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TbE-Yb-Vnh" secondAttribute="trailing" id="xBy-hX-oxi"/>
+                            <constraint firstItem="Gh7-cn-MfG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zoW-Lb-Ijy"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Posts" image="doc.fill.badge.ellipsis" catalog="system" id="HMx-tY-UJI"/>
+                    <connections>
+                        <outlet property="tableView" destination="TbE-Yb-Vnh" id="If4-gO-2vn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="654" y="-10"/>
+        </scene>
+        <!--Image-->
+        <scene sceneID="uch-sn-S4q">
+            <objects>
+                <viewController id="6Gk-PP-Ojn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F7P-xj-emC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Jdw-Qo-yZu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Image" image="doc.text.image.fill" catalog="system" id="Aem-Rq-EJZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sNf-rX-zjq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="654" y="958"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="1vx-yq-w2C">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="GwT-4I-IVy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hAw-o1-FAV">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="AAw-hV-NtE"/>
+                        <segue destination="6Gk-PP-Ojn" kind="relationship" relationship="viewControllers" id="VcM-9g-SZX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MSI-TN-fDh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-520" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="doc.fill.badge.ellipsis" catalog="system" width="122" height="128"/>
+        <image name="doc.text.image.fill" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
